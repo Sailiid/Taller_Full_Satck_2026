@@ -4,51 +4,34 @@ console.log("Script cargado correctamente");
 const formulario = document.getElementById("formulario");
 
 if (formulario) {
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    formulario.addEventListener("submit", function(event) {
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const asunto = document.getElementById("asunto").value;
+    const mensaje = document.getElementById("mensaje").value;
 
-        event.preventDefault();
+    const respuesta = document.getElementById("respuesta");
 
-        console.log("Evento submit ejecutado");
+    if (!nombre || !correo || !asunto || !mensaje) {
+      respuesta.textContent = "Todos los campos son obligatorios.";
+      return;
+    }
 
-        const nombre = document.getElementById("nombre").value;
-        const correo = document.getElementById("correo").value;
-        const mensaje = document.getElementById("mensaje").value;
-
-        console.log("Nombre:", nombre);
-        console.log("Correo:", correo);
-        console.log("Mensaje:", mensaje);
-
-        const respuesta = document.getElementById("respuesta");
-
-        // Validación
-        if (nombre === "" || correo === "" || mensaje === "") {
-            respuesta.textContent = "Todos los campos son obligatorios.";
-            return;
-        }
-
-        // ENVIAR AL BACKEND
-        fetch("http://localhost:3000/guardar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nombre: nombre,
-                correo: correo,
-                mensaje: mensaje
-            })
-        })
-        .then(res => res.text())
-        .then(data => {
-            console.log("Respuesta servidor:", data);
-            respuesta.textContent = "Datos guardados en MySQL correctamente";
-            formulario.reset();
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            respuesta.textContent = "Error al guardar los datos";
-        });
-
+    fetch("http://localhost:3000/guardar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, correo, asunto, mensaje })
+    })
+    .then(res => res.text())
+    .then(data => {
+      respuesta.textContent = data; // muestra respuesta del servidor
+      formulario.reset();
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      respuesta.textContent = "Error al guardar los datos";
     });
+  });
 }

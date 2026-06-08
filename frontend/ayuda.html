@@ -1,45 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ayuda</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Centro de ayuda de una tienda online basica para aprendices."
+    />
+    <title>Centro de ayuda | Tecnohogar</title>
+    <link rel="shortcut icon" href="./img/Copilot_20260531_160439.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
 
-<body>
+  <body>
+    <!-- Barra de navegacion principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <img
+          src="./img/vecteezy_businessman-using-laptop-secure-encryption-technology_26567012.png"
+          alt="Logo de Tecnohogar"
+          class="navbar-brand img-fluid d-none d-lg-block p-0 m-0 mx-5"
+        />
+        <a class="navbar-brand fw-bold" href="index.html">Tecnohogar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegacion"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div class="agrupar">
-
-    <header class="cabecera">
-        <h1>Ayuda</h1>
-    </header>
-
-    <!-- MENÚ -->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="ayuda.html">Ayuda</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="ayuda.html">Ayuda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <section class="seccion">
-        <article>
-            <h2>Centro de ayuda</h2>
-            <p>Aquí el usuario encuentra información de uso del sitio.</p>
-        </article>
-    </section>
+    <main>
+      <!-- Presentacion del centro de ayuda -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <h1 class="display-5 font-monospace fw-bold">Centro de ayuda</h1>
+          <p class="lead mb-0">
+            En esta pagina los usuarios encuentran respuestas a preguntas
+            frecuentes sobre compras, pagos, envios y soporte de la tienda.
+          </p>
+        </div>
+      </section>
 
-    <aside class="columna">
-        <blockquote>Soporte técnico</blockquote>
-        <blockquote>Preguntas frecuentes</blockquote>
-    </aside>
+      <!-- Preguntas frecuentes -->
+      <section class="container py-5">
+        <h2 class="h3 mb-4">Preguntas frecuentes</h2>
 
-    <footer class="pie">
-        Página de ayuda
+        <div class="accordion" id="preguntasFrecuentes">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#preguntaUno"
+                aria-expanded="true"
+                aria-controls="preguntaUno"
+              >
+                Como comprar en la tienda?
+              </button>
+            </h3>
+            <div
+              id="preguntaUno"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#preguntasFrecuentes"
+            >
+              <div class="accordion-body">
+                Primero revisa los productos disponibles, elige el articulo que
+                deseas y sigue las indicaciones de compra que se agregaran en
+                futuras versiones del proyecto.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#preguntaDos"
+                aria-expanded="false"
+                aria-controls="preguntaDos"
+              >
+                Que metodos de pago se aceptan?
+              </button>
+            </h3>
+            <div
+              id="preguntaDos"
+              class="accordion-collapse collapse"
+              data-bs-parent="#preguntasFrecuentes"
+            >
+              <div class="accordion-body">
+                Por ahora esta pagina es un ejemplo educativo. Mas adelante se
+                podrian agregar pagos contra entrega, transferencia bancaria o
+                pagos en linea.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#preguntaTres"
+                aria-expanded="false"
+                aria-controls="preguntaTres"
+              >
+                Cuanto tarda el envio?
+              </button>
+            </h3>
+            <div
+              id="preguntaTres"
+              class="accordion-collapse collapse"
+              data-bs-parent="#preguntasFrecuentes"
+            >
+              <div class="accordion-body">
+                El tiempo de envio dependera de la ciudad y del producto. En
+                una tienda real se debe informar este dato antes de finalizar la
+                compra.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#preguntaCuatro"
+                aria-expanded="false"
+                aria-controls="preguntaCuatro"
+              >
+                Como contactar soporte?
+              </button>
+            </h3>
+            <div
+              id="preguntaCuatro"
+              class="accordion-collapse collapse"
+              data-bs-parent="#preguntasFrecuentes"
+            >
+              <div class="accordion-body">
+                Puedes ingresar a la pagina de contacto para enviar tus datos y
+                escribir el motivo de tu consulta.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recomendaciones para el usuario -->
+      <section class="container pb-5">
+        <div class="p-4 bg-primary bg-gradient border rounded">
+          <h2 class="h3 mb-3 text-white font-monospace">Recomendaciones</h2>
+          <ul class="mb-0 text-white">
+            <li>Revisa bien la informacion del producto antes de comprar.</li>
+            <li>Confirma tus datos de contacto y direccion de envio.</li>
+            <li>Guarda el comprobante de pago cuando realices una compra.</li>
+            <li>Contacta soporte si tienes dudas sobre tu pedido.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer class="bg-primary text-white text-center py-3">
+      <p class="mb-0">Pagina de ayuda - Tecnohogar 2026</p>
     </footer>
 
-</div>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

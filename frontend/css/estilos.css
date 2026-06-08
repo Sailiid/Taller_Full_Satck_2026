@@ -41,11 +41,7 @@ body {
    CABECERA
 ========================= */
 
-.cabecera {
-  background: #fffbb9;
-  border: 1px solid #999999;
-  padding: 10px 5px;
-}
+
 
 .cabecera h1 {
   text-align: left;
@@ -82,13 +78,50 @@ body {
 /* =========================
    CONTENIDO PRINCIPAL
 ========================= */
-
-.seccion {
-  padding: 20px;
-  width: 600px;
-  float: left;
+.search-input {
+  background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center; /* posición del ícono */
+  background-size: 16px 16px;       /* tamaño del ícono */
+  padding-left: 35px;               /* espacio para que el texto no se superponga */
 }
 
+.img-card {
+  width: 100%;
+  height: 200px;        /* altura fija para todas las imágenes */
+  object-fit: cover;    /* recorta y ajusta la imagen sin deformarla */
+}
+.img-card-producto {
+  width: 100%;
+  height: 450px;        
+  object-fit: cover;   
+}
+.imagen-grande {
+  width: 100%;       /* ancho completo */
+  height: 600px;     /* altura más grande */
+  object-fit: cover; /* recorta sin deformar */
+}
+
+
+
+.texto-grande {
+  font-size: 80px;   /* tamaño base en pantallas grandes */
+  font-weight: bold;
+}
+
+/* Ajuste para tablets */
+@media (max-width: 992px) {
+  .texto-grande {
+    font-size: 40px;
+  }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 576px) {
+  .texto-grande {
+    font-size: 28px;
+  }
+}
 article {
   background: #fffbb9;
   border: 1px solid #999;
