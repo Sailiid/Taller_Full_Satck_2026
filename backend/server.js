@@ -30,6 +30,43 @@ app.get("/", (req, res) => {
     res.send("Servidor conectado a MySQL");
 });
 
+// Ruta para validar el ingreso administrativo
+app.post("/login", (req, res) => {
+    const { correo, password } = req.body;
+
+    if (!correo || !password) {
+        return res.status(400).json({
+            ok: false,
+            mensaje: "El correo y la contrasena son obligatorios"
+        });
+    }
+
+    const sql = "SELECT id, nombre, correo, rol FROM usuarios WHERE correo = ? AND password = ?";
+
+    db.query(sql, [correo, password], (err, result) => {
+        if (err) {
+            console.error("Error al validar login:", err);
+            return res.status(500).json({
+                ok: false,
+                mensaje: "Error del servidor"
+            });
+        }
+
+        if (result.length === 0) {
+            return res.status(401).json({
+                ok: false,
+                mensaje: "Credenciales incorrectas"
+            });
+        }
+
+        res.json({
+            ok: true,
+            mensaje: "Ingreso correcto",
+            usuario: result[0]
+        });
+    });
+});
+
 
 // ✅ RUTA PARA GUARDAR DATOS
 app.post("/guardar", (req, res) => {
