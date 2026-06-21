@@ -96,6 +96,16 @@ body {
   height: 450px;        
   object-fit: cover;   
 }
+.img-logo {
+  width: 100%;
+  height: 100px;        
+  object-fit: cover;   
+}
+.img-logo-pg {
+  width: 100%;
+  height:60px;        
+    object-fit: cover;
+}
 .imagen-grande {
   width: 100%;       /* ancho completo */
   height: 600px;     /* altura más grande */
