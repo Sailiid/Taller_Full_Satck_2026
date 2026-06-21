@@ -1,13 +1,13 @@
-# 🛒 Tecnohogar
+# 🛒 Digital House
 
 ## 1. Nombre de la tienda virtual
-**Tecnohogar**
+**Digital House**
 
 ## 2. Integrantes del grupo
 - Neymar Sailid Mendoza Moro (desarrolladora única)
 
 ## 3. Descripción de la tienda
-Tecnohogar es una tienda virtual básica y funcional dedicada a la venta de productos tecnológicos como teclados, computadores, mouse, cables y accesorios.  
+Digital House es una tienda virtual básica y funcional dedicada a la venta de productos tecnológicos como teclados, computadores, mouse, cables y accesorios.  
 El diseño utiliza una paleta de colores **azules y grises**, con una estructura simple y páginas esenciales para la navegación; como el inicio ayuda, productos, contato y login administrativo. 
 
 ## 4. Objetivo del proyecto
@@ -15,7 +15,7 @@ Este proyecto corresponde a la **Entrega final del Técnico en Programación de 
 El objetivo es dsarrollar una tienda virtual funcional y responsiva, aplicando los conocimientos adquiridos en programación Full Stack mediante el uso de HTML, CSS, JavaScript, Node.js, MySQL y Bootstrap, con el fin de integrar en un solo sistema el diseño de interfaz, la lógica de negocio y la gestión de datos. Este proyecto busca simular un entorno real de comercio electrónico, fortaleciendo las competencias técnicas como estudiante en la construcción de aplicaciones web completas, con el fin de prepararme para enfrentar retos profesionales en el ámbito del desarrollo de software y el emprendimiento digital.
 
 ## 5. Tecnologías utilizadas
-- **Frontend:** HTML5, CSS3, Bootstrap  
+- **Frontend:** HTML5, CSS3,JavaScript y Bootstrap  
 - **Backend:** Node.js con Express  
 - **Base de datos:** MySQL  
 - **Entorno de desarrollo:** Visual Studio Code  
@@ -37,6 +37,7 @@ TALLER_FULL_SATCK_2026/
 │       │── contacto.html
 │       │── login.html
 │       │── productos.html
+│       │── admin-productos.html
 │       ├── css/
 │       │   └──estilos.css
 │       ├── js/
@@ -71,7 +72,7 @@ TALLER_FULL_SATCK_2026/
 - Página principal con productos destacados.
 - Sección de ayuda y contacto con formulario.
 - Página de login para usuarios.
-- Listado de productos con categorías y precios.
+- Listado de productos con caracteristicas y precios.
 - Conexión a base de datos MySQL para gestión de productos/contactos.
 
 ## 9. Flujo de información
@@ -84,3 +85,5 @@ TALLER_FULL_SATCK_2026/
 - Conexión correcta entre frontend, backend y base de datos.
 - Visualización de productos en diferentes dispositivos (responsive con Bootstrap).
 ## 11. Enlace del video de sustentación
+
+https://youtu.be/j9rD6kUOF0o
